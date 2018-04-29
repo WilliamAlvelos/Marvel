@@ -1,0 +1,76 @@
+//
+//  Comics.swift
+//
+//  Created by William Alvelos on 28/04/18
+//  Copyright (c) . All rights reserved.
+//
+
+import Foundation
+import ObjectMapper
+
+public class Comics: Mappable {
+
+    // MARK: Declaration for string constants to be used to decode and also serialize.
+	internal let kComicsCollectionURIKey: String = "collectionURI"
+	internal let kComicsAvailableKey: String = "available"
+	internal let kComicsItemsKey: String = "items"
+	internal let kComicsReturnedKey: String = "returned"
+
+
+    // MARK: Properties
+	public var collectionURI: String?
+	public var available: Int?
+	public var items: [Items]?
+	public var returned: Int?
+
+
+
+    // MARK: ObjectMapper Initalizers
+    /**
+    Map a JSON object to this class using ObjectMapper
+    - parameter map: A mapping from ObjectMapper
+    */
+    required public init?(map: Map){
+
+    }
+
+    /**
+    Map a JSON object to this class using ObjectMapper
+    - parameter map: A mapping from ObjectMapper
+    */
+    public func mapping(map: Map) {
+		collectionURI <- map[kComicsCollectionURIKey]
+		available <- map[kComicsAvailableKey]
+		items <- map[kComicsItemsKey]
+		returned <- map[kComicsReturnedKey]
+
+    }
+
+    /**
+    Generates description of the object in the form of a NSDictionary.
+    - returns: A Key value pair containing all valid values in the object.
+    */
+//    public func dictionaryRepresentation() -> [String : AnyObject ] {
+//
+//        var dictionary: [String : AnyObject ] = [ : ]
+//        if collectionURI != nil {
+//            dictionary.updateValue(collectionURI!, forKey: kComicsCollectionURIKey)
+//        }
+//        if available != nil {
+//            dictionary.updateValue(available!, forKey: kComicsAvailableKey)
+//        }
+//        if items?.count > 0 {
+//            var temp: [AnyObject] = []
+//            for item in items! {
+//                temp.append(item.dictionaryRepresentation())
+//            }
+//            dictionary.updateValue(temp, forKey: kComicsItemsKey)
+//        }
+//        if returned != nil {
+//            dictionary.updateValue(returned!, forKey: kComicsReturnedKey)
+//        }
+//
+//        return dictionary
+//    }
+
+}
