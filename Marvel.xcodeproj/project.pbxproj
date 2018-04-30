@@ -28,7 +28,7 @@
 		3DFF0ACC2094EA7900A2AFC5 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */; };
 		3DFF0ACE2094EC5500A2AFC5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */; };
 		3DFF0AD02094F7C300A2AFC5 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACF2094F7C300A2AFC5 /* HeroesViewModel.swift */; };
-		3DFF0ADD209517B400A2AFC5 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AD3209517B300A2AFC5 /* Results.swift */; };
+		3DFF0ADD209517B400A2AFC5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AD3209517B300A2AFC5 /* Hero.swift */; };
 		3DFF0ADE209517B400A2AFC5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AD4209517B300A2AFC5 /* Data.swift */; };
 		3DFF0ADF209517B400A2AFC5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AD5209517B300A2AFC5 /* Items.swift */; };
 		3DFF0AE0209517B400A2AFC5 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AD6209517B300A2AFC5 /* Stories.swift */; };
@@ -38,6 +38,7 @@
 		3DFF0AE4209517B400A2AFC5 /* MARVEL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ADA209517B400A2AFC5 /* MARVEL.swift */; };
 		3DFF0AE5209517B400A2AFC5 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ADB209517B400A2AFC5 /* Series.swift */; };
 		3DFF0AE6209517B400A2AFC5 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ADC209517B400A2AFC5 /* Comics.swift */; };
+		3DFF0AEC2096474700A2AFC5 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0AEB2096474700A2AFC5 /* HeroViewModel.swift */; };
 		B646E55B5A0D3B011FE33849 /* Pods_MarvelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916A69FC7ED963104CB3046C /* Pods_MarvelUITests.framework */; };
 		C4776E532190EFE76D9345E5 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DAFEB92BB1C0FF737E9C0 /* Pods_MarvelTests.framework */; };
 		E2D4F1B0FB09372DA87386B8 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24C8C2027FD7E20ACC6504B /* Pods_Marvel.framework */; };
@@ -88,7 +89,7 @@
 		3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3DFF0ACF2094F7C300A2AFC5 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
-		3DFF0AD3209517B300A2AFC5 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		3DFF0AD3209517B300A2AFC5 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3DFF0AD4209517B300A2AFC5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3DFF0AD5209517B300A2AFC5 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		3DFF0AD6209517B300A2AFC5 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		3DFF0ADA209517B400A2AFC5 /* MARVEL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MARVEL.swift; sourceTree = "<group>"; };
 		3DFF0ADB209517B400A2AFC5 /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		3DFF0ADC209517B400A2AFC5 /* Comics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
+		3DFF0AEB2096474700A2AFC5 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		455DAFEB92BB1C0FF737E9C0 /* Pods_MarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		916A69FC7ED963104CB3046C /* Pods_MarvelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97561CD5ADA47C8BF1C1175C /* Pods-MarvelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelTests/Pods-MarvelTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				3DD4ACEE208584AF005BABB4 /* HeroTableViewCell.swift */,
+				3DFF0AEB2096474700A2AFC5 /* HeroViewModel.swift */,
 				3DFF0AC82094E60C00A2AFC5 /* HeroTableViewCell.xib */,
 			);
 			path = HeroTableViewCell;
@@ -258,7 +261,7 @@
 				3DFF0AD9209517B400A2AFC5 /* Events.swift */,
 				3DFF0AD5209517B300A2AFC5 /* Items.swift */,
 				3DFF0ADA209517B400A2AFC5 /* MARVEL.swift */,
-				3DFF0AD3209517B300A2AFC5 /* Results.swift */,
+				3DFF0AD3209517B300A2AFC5 /* Hero.swift */,
 				3DFF0ADB209517B400A2AFC5 /* Series.swift */,
 				3DFF0AD6209517B300A2AFC5 /* Stories.swift */,
 				3DFF0AD8209517B400A2AFC5 /* Thumbnail.swift */,
@@ -565,6 +568,7 @@
 				3DD4AD12208584AF005BABB4 /* Constants.swift in Sources */,
 				3DFF0ADE209517B400A2AFC5 /* Data.swift in Sources */,
 				3DFF0AE0209517B400A2AFC5 /* Stories.swift in Sources */,
+				3DFF0AEC2096474700A2AFC5 /* HeroViewModel.swift in Sources */,
 				3DD4AD06208584AF005BABB4 /* HeroesViewController.swift in Sources */,
 				3DFF0AE3209517B400A2AFC5 /* Events.swift in Sources */,
 				3DFF0ACE2094EC5500A2AFC5 /* BaseViewController.swift in Sources */,
@@ -579,7 +583,7 @@
 				3DD4AD05208584AF005BABB4 /* MainTabBarController.swift in Sources */,
 				3DD4AD04208584AF005BABB4 /* CharactersManager.swift in Sources */,
 				3DD4ACFC208584AF005BABB4 /* APIManager.swift in Sources */,
-				3DFF0ADD209517B400A2AFC5 /* Results.swift in Sources */,
+				3DFF0ADD209517B400A2AFC5 /* Hero.swift in Sources */,
 				3DD4AD07208584AF005BABB4 /* LoadingTableViewCell.swift in Sources */,
 				3DFF0AE2209517B400A2AFC5 /* Thumbnail.swift in Sources */,
 				3DFF0ACC2094EA7900A2AFC5 /* UIImageView+Utils.swift in Sources */,

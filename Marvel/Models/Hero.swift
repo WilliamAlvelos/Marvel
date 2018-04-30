@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public class Results: Mappable {
+public class Hero: Mappable {
 
     // MARK: Declaration for string constants to be used to decode and also serialize.
 	internal let kResultsSeriesKey: String = "series"

@@ -15,10 +15,10 @@ final class HeroesViewModel: NSObject {
     private let service: CharactersService
     
     //MARK :- vars and lets
-    var characters = Variable([Results]())
+    var characters = Variable([Hero]())
     
     //MARK :- RX
-    var charactersObservable: Observable<[Results]> {
+    var charactersObservable: Observable<[Hero]> {
         return characters.asObservable()
     }
     
@@ -37,5 +37,15 @@ final class HeroesViewModel: NSObject {
     }
     
     func title() -> String { return "Heros" }
+    
+    
+    //MARK :- TableView
+    public func cellViewModelForRowAt(indexPath: IndexPath) -> HeroViewModel {
+        return HeroViewModel(hero: self.characters.value[indexPath.row])
+    }
+    
+    func numberOfItems() -> Int {
+        return characters.value.count
+    }
     
 }

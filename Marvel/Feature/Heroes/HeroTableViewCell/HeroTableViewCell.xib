@@ -18,8 +18,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-Jh-7sS">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-Jh-7sS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="101.5" id="Mid-Dk-agj"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-NN-zki">
                         <rect key="frame" x="165.5" y="40" width="44.5" height="21"/>
@@ -33,6 +36,7 @@
                     <constraint firstItem="wHt-Jh-7sS" firstAttribute="leading" secondItem="TwV-SB-PL3" secondAttribute="leading" id="CLn-cA-rEn"/>
                     <constraint firstItem="wHt-Jh-7sS" firstAttribute="top" secondItem="TwV-SB-PL3" secondAttribute="top" id="OcB-d9-Y8g"/>
                     <constraint firstAttribute="bottom" secondItem="wHt-Jh-7sS" secondAttribute="bottom" id="VFL-hH-zKm"/>
+                    <constraint firstItem="wHt-Jh-7sS" firstAttribute="width" secondItem="TwV-SB-PL3" secondAttribute="width" id="YA6-D4-Lpj"/>
                     <constraint firstItem="Nrg-NN-zki" firstAttribute="centerY" secondItem="TwV-SB-PL3" secondAttribute="centerY" id="cq6-qZ-MFC"/>
                     <constraint firstItem="Nrg-NN-zki" firstAttribute="centerX" secondItem="TwV-SB-PL3" secondAttribute="centerX" id="yvq-2v-hbP"/>
                 </constraints>
@@ -40,6 +44,7 @@
             <connections>
                 <outlet property="nameLabel" destination="Nrg-NN-zki" id="BXI-Ly-9Dq"/>
                 <outlet property="photoImage" destination="wHt-Jh-7sS" id="qNH-M6-dIg"/>
+                <outlet property="viewHeightConstraint" destination="Mid-Dk-agj" id="XB8-Av-ttM"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-322"/>
         </tableViewCell>

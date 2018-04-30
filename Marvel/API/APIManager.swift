@@ -80,12 +80,12 @@ class APIManager: NSObject {
     //MARK:- Vars and Lets
     private let marvel = "http://gateway.marvel.com/v1/public/"
     
-    private var parameters : [String: Any] = Marvel.defaultParams
+    private var defaultParams : [String: Any] = Marvel.defaultParams
     
     //MARK:- Methods
-    func getFrom(_ method: String, params: [[String: Any]]? = nil, completion: @escaping(Any?) -> Void) {
+    func getFrom(_ method: String, params: [String: Any]? = nil, completion: @escaping(Any?) -> Void) {
         
-        Alamofire.request(marvel + method, method: .get, parameters: parameters)
+        Alamofire.request(marvel + method, method: .get, parameters: defaultParams)
             .validate()
             .responseJSON { (response) in
                 print("GET: \(response.request?.url?.absoluteString ?? "")")
