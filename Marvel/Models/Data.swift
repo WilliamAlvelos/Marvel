@@ -20,12 +20,10 @@ public class Data: Mappable {
 
     // MARK: Properties
 	public var limit: Int?
-	public var results: [Results]?
+	public var heroes: [Hero]?
 	public var total: Int?
 	public var offset: Int?
 	public var count: Int?
-
-
 
     // MARK: ObjectMapper Initalizers
     /**
@@ -42,41 +40,11 @@ public class Data: Mappable {
     */
     public func mapping(map: Map) {
 		limit <- map[kDataLimitKey]
-		results <- map[kDataResultsKey]
+		heroes <- map[kDataResultsKey]
 		total <- map[kDataTotalKey]
 		offset <- map[kDataOffsetKey]
 		count <- map[kDataCountKey]
 
     }
-
-    /**
-    Generates description of the object in the form of a NSDictionary.
-    - returns: A Key value pair containing all valid values in the object.
-    */
-//    public func dictionaryRepresentation() -> [String : AnyObject ] {
-//
-//        var dictionary: [String : AnyObject ] = [ : ]
-//        if limit != nil {
-//            dictionary.updateValue(limit!, forKey: kDataLimitKey)
-//        }
-//        if results?.count > 0 {
-//            var temp: [AnyObject] = []
-//            for item in results! {
-//                temp.append(item.dictionaryRepresentation())
-//            }
-//            dictionary.updateValue(temp, forKey: kDataResultsKey)
-//        }
-//        if total != nil {
-//            dictionary.updateValue(total!, forKey: kDataTotalKey)
-//        }
-//        if offset != nil {
-//            dictionary.updateValue(offset!, forKey: kDataOffsetKey)
-//        }
-//        if count != nil {
-//            dictionary.updateValue(count!, forKey: kDataCountKey)
-//        }
-//
-//        return dictionary
-//    }
 
 }

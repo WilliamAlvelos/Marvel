@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import AVFoundation
 import AlamofireImage
 
 // MARK: - Download Image
 extension UIImageView {
     
-    public func downloadImage(fromStringURL stringURL: String) {
+    public func downloadImage(fromStringURL stringURL: String, completion: @escaping() -> Void) {
         
         guard let url = URL(string: stringURL) else { return }
         
@@ -22,7 +23,23 @@ extension UIImageView {
                          progress: nil,
                          progressQueue: DispatchQueue.main,
                          imageTransition: .crossDissolve(0.2),
-                         runImageTransitionIfCached: false,
-                         completion: nil)
+                         runImageTransitionIfCached: false) { (data) in completion() }
+    }
+}
+
+extension UIImage {
+
+    public func height(forWidth width: CGFloat) -> CGFloat {
+        let boundingRect = CGRect(
+            x: 0,
+            y: 0,
+            width: width,
+            height: CGFloat(MAXFLOAT)
+        )
+        let rect = AVMakeRect(
+            aspectRatio: size,
+            insideRect: boundingRect
+        )
+        return rect.size.height
     }
 }

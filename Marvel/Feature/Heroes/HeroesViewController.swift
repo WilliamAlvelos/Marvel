@@ -22,12 +22,14 @@ class HeroesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad(with: self)
         
+        heroesTableView.estimatedRowHeight = 500
+        heroesTableView.rowHeight = UITableViewAutomaticDimension
+        
         title = viewModel.title()
         
-        viewModel.charactersObservable
-            .subscribe(onNext: { [weak self] character in
-                self?.heroesTableView.reloadData()
-            }).disposed(by: disposeBag)
+        viewModel.charactersObservable.subscribe(onNext: { [weak self] character in
+            self?.heroesTableView.reloadData()
+        }).disposed(by: disposeBag)
         
         configSearch()
     }
@@ -62,17 +64,21 @@ class HeroesViewController: BaseViewController {
 //FIXME :- change this to be a clean architeture
 extension HeroesViewController : UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let heroViewModel = self.viewModel.cellViewModelForRowAt(indexPath: indexPath)
         
         guard let cell = heroesTableView.dequeueReusableCell(withIdentifier: Constants.identifier.MainTableViewCell, for: indexPath) as? HeroTableViewCell else { return UITableViewCell() }
         
-        let character = self.viewModel.characters.value[indexPath.row]
+        cell.viewModel = heroViewModel
         
-        cell.nameLabel.text = character.name
-        cell.photoImage.downloadImage(fromStringURL: (character.thumbnail?.path ?? "") + "." + (character.thumbnail?.extension ?? ""))
-        
-        cell.setNeedsUpdateConstraints()
-        cell.updateConstraintsIfNeeded()
+        cell.setup {
+            self.heroesTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
         
         return cell
     }
@@ -80,6 +86,15 @@ extension HeroesViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.characters.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.numberOfItems() - 1 {
+            let footerView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            footerView.startAnimating()
+            tableView.tableFooterView = footerView
+//            viewModel.getHeroes()
+        }
     }
 }
 

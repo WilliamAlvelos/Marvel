@@ -12,7 +12,7 @@ import RxCocoa
 import RxAlamofire
 
 protocol CharactersServiceProtocol {
-    func get(completion: @escaping([Results])-> Void, error: @escaping(NSError) -> Void)
+    func get(completion: @escaping([Hero])-> Void, error: @escaping(NSError) -> Void)
 }
 
 
@@ -26,12 +26,12 @@ enum MethodType {
 final class CharactersService: CharactersServiceProtocol {
     
     
-    func get(completion: @escaping ([Results]) -> Void, error: @escaping (NSError) -> Void) {
+    func get(completion: @escaping ([Hero]) -> Void, error: @escaping (NSError) -> Void) {
         APIManager().getFrom("characters") { (response) in
             if let json = response as? [String : Any] {
                 let characters = MARVEL(JSON: json)
 
-                completion(characters?.data?.results ?? [])
+                completion(characters?.data?.heroes ?? [])
             } else {
                 error(NSError(domain: "", code: -1, userInfo: nil))
             }
