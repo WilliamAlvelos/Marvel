@@ -11,10 +11,10 @@ import UIKit
 class LoadingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var paginationActivityIndicatorView: UIActivityIndicatorView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         paginationActivityIndicatorView.startAnimating()
     }
 

@@ -465,9 +465,9 @@ public final class Blowfish {
     }
 
     private func F(x: UInt32) -> UInt32 {
-        let f1 = self.S[0][Int(x >> 24) & 0xFF];
-        let f2 = self.S[1][Int(x >> 16) & 0xFF];
-        let f3 = self.S[2][Int(x >> 8) & 0xFF];
+        let f1 = self.S[0][Int(x >> 24) & 0xFF]
+        let f2 = self.S[1][Int(x >> 16) & 0xFF]
+        let f3 = self.S[2][Int(x >> 8) & 0xFF]
         let f4 = self.S[3][Int(x & 0xFF)]
         return ((f1 &+ f2) ^ f3) &+ f4
     }
@@ -496,7 +496,6 @@ extension Blowfish: Cipher {
         return out
     }
 
-
     /// Decrypt the 8-byte padded buffer
     ///
     /// - Parameter bytes: Ciphertext data
@@ -519,6 +518,3 @@ extension Blowfish: Cipher {
         return out
     }
 }
-
-
-

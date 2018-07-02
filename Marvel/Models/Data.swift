@@ -17,7 +17,6 @@ public class Data: Mappable {
 	internal let kDataOffsetKey: String = "offset"
 	internal let kDataCountKey: String = "count"
 
-
     // MARK: Properties
 	public var limit: Int?
 	public var heroes: [Hero]?
@@ -30,7 +29,7 @@ public class Data: Mappable {
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

@@ -14,19 +14,16 @@ public class Urls: Mappable {
 	internal let kUrlsUrlKey: String = "url"
 	internal let kUrlsTypeKey: String = "type"
 
-
     // MARK: Properties
 	public var url: String?
 	public var type: String?
-
-
 
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

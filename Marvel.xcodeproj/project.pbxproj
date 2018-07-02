@@ -9,22 +9,27 @@
 /* Begin PBXBuildFile section */
 		3D0D6F2E20857AA100A1EDC4 /* MarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D6F2D20857AA100A1EDC4 /* MarvelTests.swift */; };
 		3D0D6F3920857AA100A1EDC4 /* MarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D6F3820857AA100A1EDC4 /* MarvelUITests.swift */; };
+		3D524B9E20E068060091056A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D524B9D20E068060091056A /* ErrorView.swift */; };
+		3D524BA020E068120091056A /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D524B9F20E068120091056A /* ErrorView.xib */; };
+		3D524BA320E06B8C0091056A /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D524BA220E06B8C0091056A /* MainTabBarController.storyboard */; };
+		3D6074F820E42B0F00F00BB1 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6074F720E42B0F00F00BB1 /* UIView+XIB.swift */; };
+		3D6074FE20E4638C00F00BB1 /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6074FD20E4638C00F00BB1 /* HeroCollectionViewCell.xib */; };
+		3D60750320E999CC00F00BB1 /* Trade Gothic LT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6074FC20E45CE900F00BB1 /* Trade Gothic LT Bold.ttf */; };
+		3D60750420E999CF00F00BB1 /* Trade Gothic LT Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6074FA20E45CE800F00BB1 /* Trade Gothic LT Light.ttf */; };
+		3D60750520E999D400F00BB1 /* Trade Gothic LT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6074FB20E45CE900F00BB1 /* Trade Gothic LT.ttf */; };
 		3DD4ACFC208584AF005BABB4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDA208584AF005BABB4 /* APIManager.swift */; };
 		3DD4ACFD208584AF005BABB4 /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDB208584AF005BABB4 /* Marvel.swift */; };
 		3DD4ACFE208584AF005BABB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDD208584AF005BABB4 /* AppDelegate.swift */; };
 		3DD4ACFF208584AF005BABB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDE208584AF005BABB4 /* Assets.xcassets */; };
 		3DD4AD00208584AF005BABB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDF208584AF005BABB4 /* LaunchScreen.storyboard */; };
-		3DD4AD01208584AF005BABB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4ACE1208584AF005BABB4 /* Main.storyboard */; };
-		3DD4AD02208584AF005BABB4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4ACE3208584AF005BABB4 /* Info.plist */; };
 		3DD4AD04208584AF005BABB4 /* CharactersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACE6208584AF005BABB4 /* CharactersManager.swift */; };
 		3DD4AD05208584AF005BABB4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACE9208584AF005BABB4 /* MainTabBarController.swift */; };
 		3DD4AD06208584AF005BABB4 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACEB208584AF005BABB4 /* HeroesViewController.swift */; };
 		3DD4AD07208584AF005BABB4 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACED208584AF005BABB4 /* LoadingTableViewCell.swift */; };
-		3DD4AD08208584AF005BABB4 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACEE208584AF005BABB4 /* HeroTableViewCell.swift */; };
+		3DD4AD08208584AF005BABB4 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACEE208584AF005BABB4 /* HeroCollectionViewCell.swift */; };
 		3DD4AD12208584AF005BABB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACFA208584AF005BABB4 /* Constants.swift */; };
 		3DFF0AC42094C16000A2AFC5 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF0AC32094C16000A2AFC5 /* HeroesViewController.xib */; };
 		3DFF0AC72094D45C00A2AFC5 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF0AC62094D45C00A2AFC5 /* LoadingTableViewCell.xib */; };
-		3DFF0AC92094E60C00A2AFC5 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF0AC82094E60C00A2AFC5 /* HeroTableViewCell.xib */; };
 		3DFF0ACC2094EA7900A2AFC5 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */; };
 		3DFF0ACE2094EC5500A2AFC5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */; };
 		3DFF0AD02094F7C300A2AFC5 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF0ACF2094F7C300A2AFC5 /* HeroesViewModel.swift */; };
@@ -70,24 +75,30 @@
 		3D0D6F3420857AA100A1EDC4 /* MarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0D6F3820857AA100A1EDC4 /* MarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUITests.swift; sourceTree = "<group>"; };
 		3D0D6F3A20857AA100A1EDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D524B9D20E068060091056A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		3D524B9F20E068120091056A /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		3D524BA220E06B8C0091056A /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
+		3D6074F720E42B0F00F00BB1 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
+		3D6074FA20E45CE800F00BB1 /* Trade Gothic LT Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trade Gothic LT Light.ttf"; sourceTree = "<group>"; };
+		3D6074FB20E45CE900F00BB1 /* Trade Gothic LT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trade Gothic LT.ttf"; sourceTree = "<group>"; };
+		3D6074FC20E45CE900F00BB1 /* Trade Gothic LT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trade Gothic LT Bold.ttf"; sourceTree = "<group>"; };
+		3D6074FD20E4638C00F00BB1 /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		3DD4ACDA208584AF005BABB4 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		3DD4ACDB208584AF005BABB4 /* Marvel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
 		3DD4ACDD208584AF005BABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DD4ACDE208584AF005BABB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DD4ACE0208584AF005BABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3DD4ACE2208584AF005BABB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DD4ACE3208584AF005BABB4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD4ACE6208584AF005BABB4 /* CharactersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersManager.swift; sourceTree = "<group>"; };
 		3DD4ACE9208584AF005BABB4 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3DD4ACEB208584AF005BABB4 /* HeroesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		3DD4ACED208584AF005BABB4 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
-		3DD4ACEE208584AF005BABB4 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		3DD4ACEE208584AF005BABB4 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DD4ACFA208584AF005BABB4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DFF0AC32094C16000A2AFC5 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
 		3DFF0AC62094D45C00A2AFC5 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
-		3DFF0AC82094E60C00A2AFC5 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
 		3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
-		3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../App/BaseViewController.swift; sourceTree = "<group>"; };
 		3DFF0ACF2094F7C300A2AFC5 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		3DFF0AD3209517B300A2AFC5 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3DFF0AD4209517B300A2AFC5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -190,6 +201,34 @@
 			path = MarvelUITests;
 			sourceTree = "<group>";
 		};
+		3D524B9C20E067D70091056A /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				3D524B9D20E068060091056A /* ErrorView.swift */,
+				3D524B9F20E068120091056A /* ErrorView.xib */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		3D6074F620E42AEA00F00BB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */,
+				3D6074F720E42B0F00F00BB1 /* UIView+XIB.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D6074F920E45CCF00F00BB1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D6074FC20E45CE900F00BB1 /* Trade Gothic LT Bold.ttf */,
+				3D6074FA20E45CE800F00BB1 /* Trade Gothic LT Light.ttf */,
+				3D6074FB20E45CE900F00BB1 /* Trade Gothic LT.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3DD4ACD9208584AF005BABB4 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,11 +241,10 @@
 		3DD4ACDC208584AF005BABB4 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3DFF0ACA2094EA4500A2AFC5 /* Extensions */,
 				3DD4ACDD208584AF005BABB4 /* AppDelegate.swift */,
-				3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */,
 				3DD4ACDE208584AF005BABB4 /* Assets.xcassets */,
 				3DD4ACE3208584AF005BABB4 /* Info.plist */,
+				3D6074F920E45CCF00F00BB1 /* Fonts */,
 				3DD4ACDF208584AF005BABB4 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -224,8 +262,8 @@
 		3DD4ACE8208584AF005BABB4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				3DD4ACE1208584AF005BABB4 /* Main.storyboard */,
 				3DD4ACE9208584AF005BABB4 /* MainTabBarController.swift */,
+				3D524BA220E06B8C0091056A /* MainTabBarController.storyboard */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -238,19 +276,19 @@
 				3DFF0AC32094C16000A2AFC5 /* HeroesViewController.xib */,
 				3DD4ACEB208584AF005BABB4 /* HeroesViewController.swift */,
 				3DFF0ACF2094F7C300A2AFC5 /* HeroesViewModel.swift */,
-				3DD4ACEC208584AF005BABB4 /* HeroTableViewCell */,
+				3DD4ACEC208584AF005BABB4 /* HeroCollectionViewCell */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
 		};
-		3DD4ACEC208584AF005BABB4 /* HeroTableViewCell */ = {
+		3DD4ACEC208584AF005BABB4 /* HeroCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3DD4ACEE208584AF005BABB4 /* HeroTableViewCell.swift */,
+				3DD4ACEE208584AF005BABB4 /* HeroCollectionViewCell.swift */,
 				3DFF0AEB2096474700A2AFC5 /* HeroViewModel.swift */,
-				3DFF0AC82094E60C00A2AFC5 /* HeroTableViewCell.xib */,
+				3D6074FD20E4638C00F00BB1 /* HeroCollectionViewCell.xib */,
 			);
-			path = HeroTableViewCell;
+			path = HeroCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		3DD4ACEF208584AF005BABB4 /* Models */ = {
@@ -273,6 +311,9 @@
 		3DD4ACF9208584AF005BABB4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3D6074F620E42AEA00F00BB1 /* Extensions */,
+				3D524B9C20E067D70091056A /* ErrorView */,
+				3DFF0ACD2094EC5500A2AFC5 /* BaseViewController.swift */,
 				3DFF0AC52094D43900A2AFC5 /* LoadingTableViewCell */,
 				3DD4ACFA208584AF005BABB4 /* Constants.swift */,
 			);
@@ -286,14 +327,6 @@
 				3DD4ACED208584AF005BABB4 /* LoadingTableViewCell.swift */,
 			);
 			path = LoadingTableViewCell;
-			sourceTree = "<group>";
-		};
-		3DFF0ACA2094EA4500A2AFC5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3DFF0ACB2094EA7900A2AFC5 /* UIImageView+Utils.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3DFF0AD12094FDA300A2AFC5 /* Service */ = {
@@ -346,6 +379,7 @@
 				3D0D6F1220857AA100A1EDC4 /* Frameworks */,
 				3D0D6F1320857AA100A1EDC4 /* Resources */,
 				2156905F128D37D53FF98FBA /* [CP] Embed Pods Frameworks */,
+				3D524B9720E0607F0091056A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -401,7 +435,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = WilliamAlvelos;
 				TargetAttributes = {
 					3D0D6F1420857AA100A1EDC4 = {
@@ -446,11 +480,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DFF0AC72094D45C00A2AFC5 /* LoadingTableViewCell.xib in Resources */,
-				3DD4AD02208584AF005BABB4 /* Info.plist in Resources */,
-				3DD4AD01208584AF005BABB4 /* Main.storyboard in Resources */,
+				3D60750520E999D400F00BB1 /* Trade Gothic LT.ttf in Resources */,
 				3DFF0AC42094C16000A2AFC5 /* HeroesViewController.xib in Resources */,
-				3DFF0AC92094E60C00A2AFC5 /* HeroTableViewCell.xib in Resources */,
+				3D60750320E999CC00F00BB1 /* Trade Gothic LT Bold.ttf in Resources */,
+				3D524BA020E068120091056A /* ErrorView.xib in Resources */,
+				3D6074FE20E4638C00F00BB1 /* HeroCollectionViewCell.xib in Resources */,
 				3DD4ACFF208584AF005BABB4 /* Assets.xcassets in Resources */,
+				3D60750420E999CF00F00BB1 /* Trade Gothic LT Light.ttf in Resources */,
+				3D524BA320E06B8C0091056A /* MainTabBarController.storyboard in Resources */,
 				3DD4AD00208584AF005BABB4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +559,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marvel/Pods-Marvel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3D524B9720E0607F0091056A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		73C5E6829CDF42D892C61AB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,10 +623,12 @@
 				3DD4AD06208584AF005BABB4 /* HeroesViewController.swift in Sources */,
 				3DFF0AE3209517B400A2AFC5 /* Events.swift in Sources */,
 				3DFF0ACE2094EC5500A2AFC5 /* BaseViewController.swift in Sources */,
+				3D524B9E20E068060091056A /* ErrorView.swift in Sources */,
 				3DFF0AD02094F7C300A2AFC5 /* HeroesViewModel.swift in Sources */,
-				3DD4AD08208584AF005BABB4 /* HeroTableViewCell.swift in Sources */,
+				3DD4AD08208584AF005BABB4 /* HeroCollectionViewCell.swift in Sources */,
 				3DFF0AE5209517B400A2AFC5 /* Series.swift in Sources */,
 				3DD4ACFE208584AF005BABB4 /* AppDelegate.swift in Sources */,
+				3D6074F820E42B0F00F00BB1 /* UIView+XIB.swift in Sources */,
 				3DD4ACFD208584AF005BABB4 /* Marvel.swift in Sources */,
 				3DFF0AE1209517B400A2AFC5 /* Urls.swift in Sources */,
 				3DFF0AE4209517B400A2AFC5 /* MARVEL.swift in Sources */,
@@ -631,14 +684,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		3DD4ACE1208584AF005BABB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DD4ACE2208584AF005BABB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -656,6 +701,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -663,6 +709,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -714,6 +761,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -721,6 +769,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -23,7 +23,6 @@ public class Hero: Mappable {
 	internal let kResultsComicsKey: String = "comics"
 	internal let kResultsNameKey: String = "name"
 
-
     // MARK: Properties
 	public var series: Series?
 	public var urls: [Urls]?
@@ -37,14 +36,12 @@ public class Hero: Mappable {
 	public var comics: Comics?
 	public var name: String?
 
-
-
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

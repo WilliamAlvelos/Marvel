@@ -24,8 +24,7 @@ extension ObservableType {
             }
             return self.asObservable().subscribe(observer)
     }
-    
-    
+
     /**
      Subscribes an element handler, an error handler, a completion handler and disposed handler to an observable sequence.
      
@@ -40,31 +39,29 @@ extension ObservableType {
         -> Disposable {
             #if DEBUG
                 let disposable: Disposable
-                
+
                 if let disposed = onDisposed {
                     disposable = Disposables.create(with: disposed)
-                }
-                else {
+                } else {
                     disposable = Disposables.create()
                 }
-                
+
                 let synchronizationTracker = SynchronizationTracker()
 
                 let callStack = Hooks.recordCallStackOnError ? Thread.callStackSymbols : []
 
                 let observer = AnonymousObserver<E> { event in
-                    
+
                     synchronizationTracker.register(synchronizationErrorMessage: .default)
                     defer { synchronizationTracker.unregister() }
-                    
+
                     switch event {
                     case .next(let value):
                         onNext?(value)
                     case .error(let error):
                         if let onError = onError {
                             onError(error)
-                        }
-                        else {
+                        } else {
                             Hooks.defaultErrorHandler(callStack, error)
                         }
                         disposable.dispose()
@@ -79,14 +76,13 @@ extension ObservableType {
                 )
             #else
                 let disposable: Disposable
-                
+
                 if let disposed = onDisposed {
                     disposable = Disposables.create(with: disposed)
-                }
-                else {
+                } else {
                     disposable = Disposables.create()
                 }
-                
+
                 let observer = AnonymousObserver<E> { event in
                     switch event {
                     case .next(let value):
@@ -94,8 +90,7 @@ extension ObservableType {
                     case .error(let error):
                         if let onError = onError {
                             onError(error)
-                        }
-                        else {
+                        } else {
                             Hooks.defaultErrorHandler([], error)
                         }
                         disposable.dispose()
@@ -109,14 +104,14 @@ extension ObservableType {
                     disposable
                 )
             #endif
-            
+
     }
 }
 
 import class Foundation.NSRecursiveLock
 
 extension Hooks {
-    public typealias DefaultErrorHandler = (_ subscriptionCallStack: [String], _ error: Error) -> ()
+    public typealias DefaultErrorHandler = (_ subscriptionCallStack: [String], _ error: Error) -> Void
 
     fileprivate static let _lock = RecursiveLock()
     fileprivate static var _defaultErrorHandler: DefaultErrorHandler = { subscriptionCallStack, error in
@@ -138,4 +133,3 @@ extension Hooks {
         }
     }
 }
-

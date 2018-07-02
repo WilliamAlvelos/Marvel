@@ -12,32 +12,30 @@ import RxCocoa
 import RxAlamofire
 
 protocol CharactersServiceProtocol {
-    func get(completion: @escaping([Hero])-> Void, error: @escaping(NSError) -> Void)
+    func get(completion: @escaping([Hero]) -> Void, onError: @escaping(NSError) -> Void)
 }
-
 
 enum MethodType {
     case characters
-    case Genre
-    case Credits
-    case Video
+    case genre
+    case credits
+    case video
 }
 
 final class CharactersService: CharactersServiceProtocol {
-    
-    
-    func get(completion: @escaping ([Hero]) -> Void, error: @escaping (NSError) -> Void) {
-        APIManager().getFrom("characters") { (response) in
-            if let json = response as? [String : Any] {
-                let characters = MARVEL(JSON: json)
 
+    func get(completion: @escaping ([Hero]) -> Void, onError: @escaping (NSError) -> Void) {
+        APIManager().getFrom("characters") { (response) in
+            if let json = response as? [String: Any] {
+                let characters = MARVEL(JSON: json)
+//                onError(NSError(domain: "", code: -1, userInfo: nil))
                 completion(characters?.data?.heroes ?? [])
             } else {
-                error(NSError(domain: "", code: -1, userInfo: nil))
+                onError(NSError(domain: "", code: -1, userInfo: nil))
             }
         }
     }
-    
+
     //TODO :- Change this fucking shit to another place, here it`s looks good but not enough
 //    private func getUrlWith(methodType: MethodType, id: Int? = nil) -> String{
 //        switch methodType {
@@ -68,7 +66,7 @@ final class CharactersService: CharactersServiceProtocol {
 //            }
 //        }
 //    }
-    
+
 //    func get(completion: @escaping([Characters]?) -> Void, error:@escaping(NSError) -> Void) {
 //
 //        APIManager().getFrom(getUrlWith(methodType: .characters)) { (result) in
@@ -92,4 +90,3 @@ final class CharactersService: CharactersServiceProtocol {
 //        return APIManager().getFrom("characters")
 //    }
 //}
-

@@ -12,18 +12,18 @@ import AlamofireImage
 
 // MARK: - Download Image
 extension UIImageView {
-    
+
     public func downloadImage(fromStringURL stringURL: String, completion: @escaping() -> Void) {
-        
+
         guard let url = URL(string: stringURL) else { return }
-        
+
         self.af_setImage(withURL: url,
                          placeholderImage: #imageLiteral(resourceName: "marvel"),
                          filter: nil,
                          progress: nil,
                          progressQueue: DispatchQueue.main,
                          imageTransition: .crossDissolve(0.2),
-                         runImageTransitionIfCached: false) { (data) in completion() }
+                         runImageTransitionIfCached: false) { (_) in completion() }
     }
 }
 

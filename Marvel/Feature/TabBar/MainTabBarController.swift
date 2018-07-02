@@ -10,28 +10,29 @@ import UIKit
 import Foundation
 
 class MainTabBarController: UITabBarController {
-    
-    private var herosViewController : HeroesViewController = {
+
+    private var herosViewController: HeroesViewController = {
         let herosViewController = HeroesViewController(nibName: Constants.NibName.HeroesViewController, bundle: Bundle.main)
-        
+
         herosViewController.viewModel  = HeroesViewModel(service: CharactersService())
-        
+
         return herosViewController
     }()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let mainViewController = UINavigationController(rootViewController: herosViewController)
-        
-        mainViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-        
+
+        mainViewController.tabBarItem = UITabBarItem(title: "",
+                                                     image: UIImage(named: "superhero"),
+                                                     tag: 0)
+
         let tabBarList = [mainViewController]
-        
+
         self.viewControllers = tabBarList
     }
-    
+
 }
 
 extension MainTabBarController: UITabBarControllerDelegate { }

@@ -135,7 +135,7 @@ final class ActivityIndicator: Indicator {
             #else
                 let indicatorStyle = UIActivityIndicatorViewStyle.gray
             #endif
-            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle:indicatorStyle)
+            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: indicatorStyle)
             activityIndicatorView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin, .flexibleTopMargin]
         #endif
     }
@@ -157,7 +157,7 @@ final class ImageIndicator: Indicator {
         if !options.preloadAllAnimationData {
             options.append(.preloadAllAnimationData)
         }
-        
+
         guard let image = processor.process(item: .data(data), options: options) else {
             return nil
         }
@@ -165,7 +165,7 @@ final class ImageIndicator: Indicator {
         animatedImageIndicatorView = ImageView()
         animatedImageIndicatorView.image = image
         animatedImageIndicatorView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-        
+
         #if os(macOS)
             // Need for gif to animate on macOS
             self.animatedImageIndicatorView.imageScaling = .scaleNone

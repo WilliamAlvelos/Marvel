@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class HeroViewModel: NSObject {
-    
+
     var hero: Hero
     var image: String
     var height: CGFloat?
-    
+
     init(hero: Hero) {
         self.hero = hero
         image = (hero.thumbnail?.path ?? "") + "." + (hero.thumbnail?.extension ?? "")
     }
-    
+
 }

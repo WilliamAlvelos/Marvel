@@ -72,5 +72,5 @@ extension String {
     public func authenticate<A: Authenticator>(with authenticator: A) throws -> String {
         return try Array(self.utf8).authenticate(with: authenticator).toHexString()
     }
-    
+
 }

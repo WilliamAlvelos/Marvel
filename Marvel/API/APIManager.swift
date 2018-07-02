@@ -12,7 +12,6 @@ import RxSwift
 import RxCocoa
 import RxAlamofire
 
-
 ////
 ////  APIManager.swift
 ////  Animations
@@ -59,12 +58,12 @@ import RxAlamofire
 //
 //class APIManager: NSObject {
 //
-//    //MARK:- Vars and Lets
+// MARK: - Vars and Lets
 //    private let marvel = "http://gateway.marvel.com/v1/public/"
 //
 //    private var parameters : [String: Any] = Marvel.defaultParams
 //
-//    //MARK:- Methods
+// MARK: - Methods
 //    func getFrom(_ method: String, params: [String: Any]? = nil) -> Observable {
 //        return RxAlamofire
 //            .request(.get, marvel + method, parameters: params, headers: nil)
@@ -74,34 +73,30 @@ import RxAlamofire
 //
 //}
 
-
 class APIManager: NSObject {
-    
-    //MARK:- Vars and Lets
+
+    // MARK: - Vars and Lets
     private let marvel = "http://gateway.marvel.com/v1/public/"
-    
-    private var defaultParams : [String: Any] = Marvel.defaultParams
-    
-    //MARK:- Methods
+
+    private var defaultParams: [String: Any] = Marvel.defaultParams
+
+    // MARK: - Methods
     func getFrom(_ method: String, params: [String: Any]? = nil, completion: @escaping(Any?) -> Void) {
-        
+
         Alamofire.request(marvel + method, method: .get, parameters: defaultParams)
             .validate()
             .responseJSON { (response) in
                 print("GET: \(response.request?.url?.absoluteString ?? "")")
 
-                switch response.result
-                {
+                switch response.result {
                 case .success:
                     do {
-                        completion(try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String : Any])
+                        completion(try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String: Any])
                     } catch {
                         completion(NSError(domain: "", code: -1, userInfo: nil))
                     }
-                    break
                 case .failure(let error):
                     completion(error)
-                    break
                 }
         }
     }

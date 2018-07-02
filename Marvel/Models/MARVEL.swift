@@ -19,7 +19,6 @@ public class MARVEL: Mappable {
 	internal let kMARVELEtagKey: String = "etag"
 	internal let kMARVELStatusKey: String = "status"
 
-
     // MARK: Properties
 	public var attributionText: String?
 	public var attributionHTML: String?
@@ -29,14 +28,12 @@ public class MARVEL: Mappable {
 	public var etag: String?
 	public var status: String?
 
-
-
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

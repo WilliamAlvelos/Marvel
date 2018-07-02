@@ -9,37 +9,32 @@
 import UIKit
 import AlamofireImage
 
-class HeroTableViewCell: UITableViewCell {
+class HeroCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImage: UIImageView!
-    @IBOutlet var viewHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+
     var viewModel: HeroViewModel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func setup(completion: @escaping() -> Void) {
         nameLabel.text = viewModel.hero.name
+        activityIndicatorView.startAnimating()
+        photoImage.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        photoImage.translatesAutoresizingMaskIntoConstraints = false
         photoImage.downloadImage(fromStringURL: viewModel.image) {
-            if self.viewHeightConstraint.constant != (self.photoImage.image?.height(forWidth: self.frame.width))! {
-                
-                self.viewHeightConstraint.constant = (self.photoImage.image?.height(forWidth: self.frame.width))!
-                completion()
-            }
+            completion()
         }
     }
-
+    override func prepareForReuse() {
+        photoImage.af_cancelImageRequest()
+    }
 }

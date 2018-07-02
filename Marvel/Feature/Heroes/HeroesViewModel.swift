@@ -7,45 +7,50 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
 final class HeroesViewModel: NSObject {
-    
-    private let service: CharactersService
-    
-    //MARK :- vars and lets
-    var characters = Variable([Hero]())
-    
-    //MARK :- RX
-    var charactersObservable: Observable<[Hero]> {
-        return characters.asObservable()
-    }
-    
-    
-    init(service: CharactersService) {
-        self.service = service
 
-    }
-    
-    func getHeroes() {
-        service.get(completion: { (characters) in
-            self.characters.value = characters
-        }) { (error) in
-            //TODO: THERE IS A ERROR SO YOU SHOULD DO SOME ACTION
+    private let service: CharactersService
+
+    // MARK: - vars and lets
+
+    var reloadTableViewClosure: (() -> Void)?
+    var showErrorClosure: (() -> Void)?
+    var updateLoadingStatus: (() -> Void)?
+
+    private var cellViewModels: [Hero] = [Hero]() {
+        didSet {
+            self.reloadTableViewClosure?()
         }
     }
-    
+
+    var error: Error? {
+        didSet {
+            self.showErrorClosure?()
+        }
+    }
+
+    init(service: CharactersService) {
+        self.service = service
+    }
+
+    func getHeroes() {
+        service.get(completion: { (characters) in
+            self.cellViewModels = characters
+        }, onError: { (error) in
+            self.error = error
+        })
+    }
+
     func title() -> String { return "Heros" }
-    
-    
-    //MARK :- TableView
+
+    // MARK: - TableView
     public func cellViewModelForRowAt(indexPath: IndexPath) -> HeroViewModel {
-        return HeroViewModel(hero: self.characters.value[indexPath.row])
+        return HeroViewModel(hero: cellViewModels[indexPath.row])
     }
-    
+
     func numberOfItems() -> Int {
-        return characters.value.count
+        return cellViewModels.count
     }
-    
+
 }

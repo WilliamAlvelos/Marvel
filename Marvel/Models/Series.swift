@@ -16,21 +16,18 @@ public class Series: Mappable {
 	internal let kSeriesItemsKey: String = "items"
 	internal let kSeriesReturnedKey: String = "returned"
 
-
     // MARK: Properties
 	public var collectionURI: String?
 	public var available: Int?
 	public var items: [Items]?
 	public var returned: Int?
 
-
-
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

@@ -14,19 +14,16 @@ public class Items: Mappable {
 	internal let kItemsResourceURIKey: String = "resourceURI"
 	internal let kItemsNameKey: String = "name"
 
-
     // MARK: Properties
 	public var resourceURI: String?
 	public var name: String?
-
-
 
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 

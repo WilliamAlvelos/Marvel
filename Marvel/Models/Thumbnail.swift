@@ -14,19 +14,16 @@ public class Thumbnail: Mappable {
 	internal let kThumbnailPathKey: String = "path"
 	internal let kThumbnailExtensionKey: String = "extension"
 
-
     // MARK: Properties
 	public var path: String?
 	public var `extension`: String?
-
-
 
     // MARK: ObjectMapper Initalizers
     /**
     Map a JSON object to this class using ObjectMapper
     - parameter map: A mapping from ObjectMapper
     */
-    required public init?(map: Map){
+    required public init?(map: Map) {
 
     }
 
