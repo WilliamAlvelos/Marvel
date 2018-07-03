@@ -20,11 +20,9 @@ class HeroesViewController: BaseViewController {
     var viewModel: HeroesViewModel!
     let disposeBag = DisposeBag()
     
-    fileprivate let itemsPerRow: CGFloat = 3
-    fileprivate let sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 50,
-                                                               left: 20,
-                                                               bottom: 50,
-                                                               right: 20)
+    fileprivate let itemsPerRow: CGFloat = 2
+    fileprivate let sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 10,
+                                                               bottom: 20, right: 10)
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -32,15 +30,6 @@ class HeroesViewController: BaseViewController {
         title = viewModel.title()
         navigationController?.navigationBar.prefersLargeTitles = true
         configSearch()
-        
-        for family: String in UIFont.familyNames
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,8 +40,10 @@ class HeroesViewController: BaseViewController {
     func setupUI() {
         collectionView.register(Constants.Nib.HeroCollectionViewCell,
                                 forCellWithReuseIdentifier: Constants.ReuseId.HeroCollectionViewCell)
-
-        // Constants.Identifier.LoadingTableViewCell)
+        
+        collectionView.register(Constants.Nib.LoadingCollectionViewCell,
+                                forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                                withReuseIdentifier: Constants.ReuseId.LoadingCollectionViewCell)
     }
     func setupObservables() {
         viewModel.reloadTableViewClosure = { [weak self] () in
@@ -89,10 +80,6 @@ extension HeroesViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
         return cell
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-    }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItems()
@@ -100,7 +87,7 @@ extension HeroesViewController: UICollectionViewDelegate, UICollectionViewDataSo
 }
 
 // MARK: UICollectionViewDelegateFlowLayout
-extension HeroesViewController : UICollectionViewDelegateFlowLayout {
+extension HeroesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -122,19 +109,47 @@ extension HeroesViewController : UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
-}
+    
+    // MARK: Pagination
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionElementKindSectionFooter {
+            viewModel.getHeroes(isPagination: true)
 
-
-// TODO: Pagination
-
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                   withReuseIdentifier: Constants.ReuseId.LoadingCollectionViewCell,
+                                                                   for: indexPath)
+        }
+        
+        return UICollectionReusableView(frame: CGRect.zero)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if viewModel.isLoading {
+            return CGSize.zero
+        }
+        return CGSize(width: collectionView.bounds.size.width, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
+        if elementKind == UICollectionElementKindSectionFooter {
+            viewModel.isLoading = false
+        }
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 //        if indexPath.row == viewModel.numberOfItems() - 1 {
 //            let footerView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 //            footerView.startAnimating()
-//            tableView.tableFooterView = footerView
-////            viewModel.getHeroes()
+//            collectionView.section  = footerView
+//            viewModel.getHeroes()
 //        }
 //    }
+}
 
 extension HeroesViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {

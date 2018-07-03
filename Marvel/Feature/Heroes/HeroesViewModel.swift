@@ -29,14 +29,20 @@ final class HeroesViewModel: NSObject {
             self.showErrorClosure?()
         }
     }
+    
+    var isLoading: Bool = false
+    
+    // MARK: Inits
 
     init(service: CharactersService) {
         self.service = service
     }
 
-    func getHeroes() {
+    // MARK: Methods
+    
+    func getHeroes(isPagination: Bool = false) {
         service.get(completion: { (characters) in
-            self.cellViewModels = characters
+            self.cellViewModels = isPagination ? self.cellViewModels + characters : characters
         }, onError: { (error) in
             self.error = error
         })

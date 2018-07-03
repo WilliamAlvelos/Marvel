@@ -16,12 +16,17 @@ struct Constants {
         static let LoadingTableViewCell = "LoadingTableViewCell"
 
         static let HeroCollectionViewCell = "HeroCollectionViewCell"
+        
+        static let LoadingCollectionViewCell = "LoadingCollectionViewCell"
 
     }
 
     struct Nib {
         static let HeroCollectionViewCell = UINib(nibName: Constants.NibName.HeroCollectionViewCell,
                                                   bundle: nil)
+        
+        static let LoadingCollectionViewCell = UINib(nibName: Constants.NibName.LoadingCollectionViewCell,
+                                                     bundle: nil)
 
     }
 
@@ -30,6 +35,7 @@ struct Constants {
         static let MainTableViewCell = "MainTableViewCellIdentifier"
 
         static let HeroCollectionViewCell = "HeroCollectionViewCell"
+        static let LoadingCollectionViewCell = "LoadingCollectionViewCell"
     }
 }
 

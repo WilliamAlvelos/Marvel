@@ -28,7 +28,6 @@ final class CharactersService: CharactersServiceProtocol {
         APIManager().getFrom("characters") { (response) in
             if let json = response as? [String: Any] {
                 let characters = MARVEL(JSON: json)
-//                onError(NSError(domain: "", code: -1, userInfo: nil))
                 completion(characters?.data?.heroes ?? [])
             } else {
                 onError(NSError(domain: "", code: -1, userInfo: nil))
