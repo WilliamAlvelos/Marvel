@@ -19,6 +19,9 @@
 		3D60750520E999D400F00BB1 /* Trade Gothic LT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D6074FB20E45CE900F00BB1 /* Trade Gothic LT.ttf */; };
 		3D6075E320EAE81A00F00BB1 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6075E120EAE81A00F00BB1 /* LoadingCollectionViewCell.swift */; };
 		3D6075E420EAE81A00F00BB1 /* LoadingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6075E220EAE81A00F00BB1 /* LoadingCollectionViewCell.xib */; };
+		3D6075E820EB8E6E00F00BB1 /* WhoAmIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6075E620EB8E6E00F00BB1 /* WhoAmIViewController.swift */; };
+		3D6075E920EB8E6E00F00BB1 /* WhoAmIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6075E720EB8E6E00F00BB1 /* WhoAmIViewController.xib */; };
+		3D6075EB20EB8E9300F00BB1 /* WhoAmIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6075EA20EB8E9300F00BB1 /* WhoAmIViewModel.swift */; };
 		3DD4ACFC208584AF005BABB4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDA208584AF005BABB4 /* APIManager.swift */; };
 		3DD4ACFD208584AF005BABB4 /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDB208584AF005BABB4 /* Marvel.swift */; };
 		3DD4ACFE208584AF005BABB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4ACDD208584AF005BABB4 /* AppDelegate.swift */; };
@@ -87,6 +90,9 @@
 		3D6074FD20E4638C00F00BB1 /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		3D6075E120EAE81A00F00BB1 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D6075E220EAE81A00F00BB1 /* LoadingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionViewCell.xib; sourceTree = "<group>"; };
+		3D6075E620EB8E6E00F00BB1 /* WhoAmIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAmIViewController.swift; sourceTree = "<group>"; };
+		3D6075E720EB8E6E00F00BB1 /* WhoAmIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhoAmIViewController.xib; sourceTree = "<group>"; };
+		3D6075EA20EB8E9300F00BB1 /* WhoAmIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAmIViewModel.swift; sourceTree = "<group>"; };
 		3DD4ACDA208584AF005BABB4 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		3DD4ACDB208584AF005BABB4 /* Marvel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
 		3DD4ACDD208584AF005BABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +258,16 @@
 			path = LoadingCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		3D6075E520EB8E3700F00BB1 /* Who am I */ = {
+			isa = PBXGroup;
+			children = (
+				3D6075E620EB8E6E00F00BB1 /* WhoAmIViewController.swift */,
+				3D6075EA20EB8E9300F00BB1 /* WhoAmIViewModel.swift */,
+				3D6075E720EB8E6E00F00BB1 /* WhoAmIViewController.xib */,
+			);
+			path = "Who am I";
+			sourceTree = "<group>";
+		};
 		3DD4ACD9208584AF005BABB4 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				3DD4ACE8208584AF005BABB4 /* TabBar */,
+				3D6075E520EB8E3700F00BB1 /* Who am I */,
 				3DD4ACEA208584AF005BABB4 /* Heroes */,
 			);
 			path = Feature;
@@ -506,6 +523,7 @@
 				3D60750520E999D400F00BB1 /* Trade Gothic LT.ttf in Resources */,
 				3DFF0AC42094C16000A2AFC5 /* HeroesViewController.xib in Resources */,
 				3D60750320E999CC00F00BB1 /* Trade Gothic LT Bold.ttf in Resources */,
+				3D6075E920EB8E6E00F00BB1 /* WhoAmIViewController.xib in Resources */,
 				3D524BA020E068120091056A /* ErrorView.xib in Resources */,
 				3D6074FE20E4638C00F00BB1 /* HeroCollectionViewCell.xib in Resources */,
 				3DD4ACFF208584AF005BABB4 /* Assets.xcassets in Resources */,
@@ -660,8 +678,10 @@
 				3DD4AD04208584AF005BABB4 /* CharactersManager.swift in Sources */,
 				3DD4ACFC208584AF005BABB4 /* APIManager.swift in Sources */,
 				3DFF0ADD209517B400A2AFC5 /* Hero.swift in Sources */,
+				3D6075EB20EB8E9300F00BB1 /* WhoAmIViewModel.swift in Sources */,
 				3DD4AD07208584AF005BABB4 /* LoadingTableViewCell.swift in Sources */,
 				3DFF0AE2209517B400A2AFC5 /* Thumbnail.swift in Sources */,
+				3D6075E820EB8E6E00F00BB1 /* WhoAmIViewController.swift in Sources */,
 				3DFF0ACC2094EA7900A2AFC5 /* UIImageView+Utils.swift in Sources */,
 				3DFF0AE6209517B400A2AFC5 /* Comics.swift in Sources */,
 				3D6075E320EAE81A00F00BB1 /* LoadingCollectionViewCell.swift in Sources */,

@@ -26,11 +26,12 @@ final class CharactersService: CharactersServiceProtocol {
 
     func get(completion: @escaping ([Hero]) -> Void, onError: @escaping (NSError) -> Void) {
         APIManager().getFrom("characters") { (response) in
-            if let json = response as? [String: Any] {
-                let characters = MARVEL(JSON: json)
+            switch response {
+            case let .onSuccess(json):
+                let characters = MARVEL(JSON: json!)
                 completion(characters?.data?.heroes ?? [])
-            } else {
-                onError(NSError(domain: "", code: -1, userInfo: nil))
+            case let .onError(error):
+                onError(error as NSError)
             }
         }
     }

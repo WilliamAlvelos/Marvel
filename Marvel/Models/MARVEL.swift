@@ -51,37 +51,4 @@ public class MARVEL: Mappable {
 		status <- map[kMARVELStatusKey]
 
     }
-
-    /**
-    Generates description of the object in the form of a NSDictionary.
-    - returns: A Key value pair containing all valid values in the object.
-    */
-//    public func dictionaryRepresentation() -> [String : AnyObject ] {
-//
-//        var dictionary: [String : AnyObject ] = [ : ]
-//        if attributionText != nil {
-//            dictionary.updateValue(attributionText!, forKey: kMARVELAttributionTextKey)
-//        }
-//        if attributionHTML != nil {
-//            dictionary.updateValue(attributionHTML!, forKey: kMARVELAttributionHTMLKey)
-//        }
-//        if data != nil {
-//            dictionary.updateValue(data!.dictionaryRepresentation(), forKey: kMARVELDataKey)
-//        }
-//        if code != nil {
-//            dictionary.updateValue(code!, forKey: kMARVELCodeKey)
-//        }
-//        if copyright != nil {
-//            dictionary.updateValue(copyright!, forKey: kMARVELCopyrightKey)
-//        }
-//        if etag != nil {
-//            dictionary.updateValue(etag!, forKey: kMARVELEtagKey)
-//        }
-//        if status != nil {
-//            dictionary.updateValue(status!, forKey: kMARVELStatusKey)
-//        }
-//
-//        return dictionary
-//    }
-
 }

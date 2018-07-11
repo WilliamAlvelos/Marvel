@@ -12,6 +12,9 @@ import UIKit
 struct Constants {
     struct NibName {
         static let HeroesViewController = "HeroesViewController"
+        static let WhoAmIViewController = "WhoAmIViewController"
+
+        
         static let HeroTableViewCell = "HeroTableViewCell"
         static let LoadingTableViewCell = "LoadingTableViewCell"
 

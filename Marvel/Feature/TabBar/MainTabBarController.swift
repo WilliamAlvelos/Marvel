@@ -14,23 +14,35 @@ class MainTabBarController: UITabBarController {
     private var herosViewController: HeroesViewController = {
         let herosViewController = HeroesViewController(nibName: Constants.NibName.HeroesViewController, bundle: Bundle.main)
 
-        herosViewController.viewModel  = HeroesViewModel(service: CharactersService())
+        herosViewController.viewModel = HeroesViewModel(service: CharactersService())
 
         return herosViewController
     }()
+    
+    private var whoAmIViewController: WhoAmIViewController = {
+        let whoAmIViewController = WhoAmIViewController(nibName: Constants.NibName.WhoAmIViewController, bundle: Bundle.main)
 
+        whoAmIViewController.viewModel = WhoAmIViewModel()
+        
+        return whoAmIViewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let mainViewController = UINavigationController(rootViewController: herosViewController)
+        let herosViewController = UINavigationController(rootViewController: self.herosViewController)
+        
+        let whoAmIViewController = UINavigationController(rootViewController: self.whoAmIViewController)
 
-        mainViewController.tabBarItem = UITabBarItem(title: "",
+        herosViewController.tabBarItem = UITabBarItem(title: "",
                                                      image: UIImage(named: "superhero"),
                                                      tag: 0)
-
-        let tabBarList = [mainViewController]
-
-        self.viewControllers = tabBarList
+        
+        whoAmIViewController.tabBarItem = UITabBarItem(title: "Who am I?",
+                                                     image: UIImage(named: "superhero"),
+                                                     tag: 1)
+        
+        self.viewControllers = [herosViewController, whoAmIViewController]
     }
 
 }
