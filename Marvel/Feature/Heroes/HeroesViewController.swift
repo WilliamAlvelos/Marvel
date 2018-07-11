@@ -114,7 +114,7 @@ extension HeroesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionFooter {
-            viewModel.getHeroes(isPagination: true)
+            viewModel.paginate()
 
             return collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                    withReuseIdentifier: Constants.ReuseId.LoadingCollectionViewCell,
@@ -140,15 +140,6 @@ extension HeroesViewController: UICollectionViewDelegateFlowLayout {
             viewModel.isLoading = false
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if indexPath.row == viewModel.numberOfItems() - 1 {
-//            let footerView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-//            footerView.startAnimating()
-//            collectionView.section  = footerView
-//            viewModel.getHeroes()
-//        }
-//    }
 }
 
 extension HeroesViewController: UISearchResultsUpdating {

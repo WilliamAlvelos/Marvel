@@ -23,12 +23,29 @@ enum MethodType {
 }
 
 final class CharactersService: CharactersServiceProtocol {
+    
+    fileprivate var pageNumber = 0
 
     func get(completion: @escaping ([Hero]) -> Void, onError: @escaping (NSError) -> Void) {
+        pageNumber = 0
         APIManager().getFrom("characters") { (response) in
             switch response {
             case let .onSuccess(json):
                 let characters = MARVEL(JSON: json!)
+                completion(characters?.data?.heroes ?? [])
+            case let .onError(error):
+                onError(error as NSError)
+            }
+        }
+    }
+    
+    func paginate(completion: @escaping ([Hero]) -> Void, onError: @escaping (NSError) -> Void) {
+        
+        APIManager().getFrom("characters", params: ["offset": pageNumber * 20]) { (response) in
+            switch response {
+            case let .onSuccess(json):
+                let characters = MARVEL(JSON: json!)
+                self.pageNumber += 1
                 completion(characters?.data?.heroes ?? [])
             case let .onError(error):
                 onError(error as NSError)

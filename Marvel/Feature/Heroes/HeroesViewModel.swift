@@ -40,9 +40,18 @@ final class HeroesViewModel: NSObject {
 
     // MARK: Methods
     
-    func getHeroes(isPagination: Bool = false) {
+    func getHeroes() {
+        
         service.get(completion: { (characters) in
-            self.cellViewModels = isPagination ? self.cellViewModels + characters : characters
+            self.cellViewModels = characters
+        }, onError: { (error) in
+            self.error = error
+        })
+    }
+    
+    func paginate() {
+        service.paginate(completion: { (characters) in
+            self.cellViewModels += characters
         }, onError: { (error) in
             self.error = error
         })

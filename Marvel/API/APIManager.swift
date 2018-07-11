@@ -26,8 +26,7 @@ class APIManager: NSObject {
 
     // MARK: - Methods
     func getFrom(_ method: String, params: [String: Any]? = nil, completion: @escaping(ResponseValue) -> Void) {
-
-        Alamofire.request(marvel + method, method: .get, parameters: defaultParams)
+        Alamofire.request(marvel + method, method: .get, parameters: defaultParams.merge(with: params))
             .validate()
             .responseJSON { (response) in
                 print("GET: \(response.request?.url?.absoluteString ?? "")")
