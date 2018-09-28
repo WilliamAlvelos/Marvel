@@ -14,7 +14,7 @@ import RxCocoa
 class HeroesViewController: BaseViewController {
 
     // MARK: IBOutlet
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: Properties
     var viewModel: HeroesViewModel!

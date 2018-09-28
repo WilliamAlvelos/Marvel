@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
     private var whoAmIViewController: WhoAmIViewController = {
         let whoAmIViewController = WhoAmIViewController(nibName: Constants.NibName.WhoAmIViewController, bundle: Bundle.main)
 
-        whoAmIViewController.viewModel = WhoAmIViewModel()
+        whoAmIViewController.viewModel = WhoAmIViewModel(service: CharactersService())
         
         return whoAmIViewController
     }()
@@ -34,7 +34,7 @@ class MainTabBarController: UITabBarController {
         
         let whoAmIViewController = UINavigationController(rootViewController: self.whoAmIViewController)
 
-        herosViewController.tabBarItem = UITabBarItem(title: "",
+        herosViewController.tabBarItem = UITabBarItem(title: "Heros",
                                                      image: UIImage(named: "superhero"),
                                                      tag: 0)
         

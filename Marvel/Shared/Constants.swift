@@ -14,7 +14,6 @@ struct Constants {
         static let HeroesViewController = "HeroesViewController"
         static let WhoAmIViewController = "WhoAmIViewController"
 
-        
         static let HeroTableViewCell = "HeroTableViewCell"
         static let LoadingTableViewCell = "LoadingTableViewCell"
 

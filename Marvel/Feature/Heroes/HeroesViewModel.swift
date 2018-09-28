@@ -13,7 +13,6 @@ final class HeroesViewModel: NSObject {
     private let service: CharactersService
 
     // MARK: - vars and lets
-
     var reloadTableViewClosure: (() -> Void)?
     var showErrorClosure: (() -> Void)?
     var updateLoadingStatus: (() -> Void)?
@@ -41,7 +40,6 @@ final class HeroesViewModel: NSObject {
     // MARK: Methods
     
     func getHeroes() {
-        
         service.get(completion: { (characters) in
             self.cellViewModels = characters
         }, onError: { (error) in
